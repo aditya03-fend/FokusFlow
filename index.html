@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FokusFlow - Atur Kekacauan. Dapatkan Fokus Anda Kembali.</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3B82F6', 
+                            hover: '#2563EB' 
+                        },
+                        secondary: '#6B7280', 
+                        dark: '#111827' 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-dark antialiased">
+
+\    <header id="navbar" class="sticky top-0 z-50 w-full bg-white transition-all duration-300">
+        <div class="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-dark">FokusFlow</a>
+
+            <nav class="hidden items-center space-x-8 lg:flex">
+                <a href="#fitur" class="text-secondary hover:text-dark transition-colors">Fitur</a>
+                <a href="#harga" class="text-secondary hover:text-dark transition-colors">Harga</a>
+                <a href="#testimoni" class="text-secondary hover:text-dark transition-colors">Testimoni</a>
+                <a href="#" class="text-secondary hover:text-dark transition-colors">Login</a>
+                <a href="#" class="rounded-lg border border-primary px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-blue-50">
+                    Daftar Gratis
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="z-50 block lg:hidden" aria-label="Buka menu">
+                <i id="menu-icon" data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="absolute top-0 left-0 z-40 flex h-screen w-full -translate-x-full flex-col items-center space-y-6 bg-white pt-24 text-lg transition-transform duration-300 ease-in-out lg:hidden">
+            <a href="#fitur" class="text-dark hover:text-primary">Fitur</a>
+            <a href="#harga" class="text-dark hover:text-primary">Harga</a>
+            <a href="#testimoni" class="text-dark hover:text-primary">Testimoni</a>
+            <hr class="w-1/2 border-gray-200" />
+            <a href="#" class="text-dark hover:text-primary">Login</a>
+            <a href="#" class="rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary-hover">
+                Daftar Gratis
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-32">
+            <div class="container mx-auto grid grid-cols-1 items-center gap-12 px-4 lg:grid-cols-2 lg:gap-20 lg:px-8">
+                <div class="z-10 text-center lg:text-left">
+                    <h1 class="text-5xl font-bold tracking-tight text-dark md:text-6xl">
+                        Atur Kekacauan. Dapatkan Fokus Anda Kembali.
+                    </h1>
+                    <p class="mt-6 text-lg leading-8 text-secondary">
+                        FokusFlow adalah alat produktivitas minimalis untuk tim yang ingin menyelesaikan lebih banyak pekerjaan tanpa pusing dengan fitur yang rumit.
+                    </p>
+                    <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                        <a href="#" class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover sm:w-auto">
+                            Mulai Gratis Selamanya
+                            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                    <p class="mt-6 text-sm text-secondary">
+                        Tanpa perlu kartu kredit. Dipercaya oleh 10.000+ freelancer.
+                    </p>
+                </div>
+                
+                <div class="relative mx-auto max-w-2xl lg:max-w-none">
+                    <div class="rounded-xl border border-gray-200 bg-white p-2 shadow-2xl shadow-gray-200/50">
+                        <div class="aspect-video w-full rounded-lg bg-gray-50 p-4 border border-gray-100">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-1.5">
+                                    <div class="h-3 w-3 rounded-full bg-gray-300"></div>
+                                    <div class="h-3 w-3 rounded-full bg-gray-300"></div>
+                                    <div class="h-3 w-3 rounded-full bg-gray-300"></div>
+                                </div>
+                                <div class="h-5 w-24 rounded-md bg-gray-200"></div>
+                            </div>
+                            <div class="mt-4 flex space-x-4">
+                                <div class="w-1/3 space-y-2">
+                                    <div class="h-6 w-full rounded bg-gray-200"></div>
+                                    <div class="h-10 w-full rounded-md bg-white border border-gray-200"></div>
+                                    <div class="h-10 w-full rounded-md bg-white border border-gray-200"></div>
+                                </div>
+                                <div class="w-2/3 space-y-2">
+                                    <div class="h-6 w-full rounded bg-gray-200"></div>
+                                    <div class="h-24 w-full rounded-md bg-white border border-gray-200 p-2">
+                                        <div class="h-4 w-1/2 rounded bg-blue-100"></div>
+                                        <div class="mt-2 h-3 w-3/4 rounded bg-gray-200"></div>
+                                    </div>
+                                    <div class="h-16 w-full rounded-md bg-white border border-gray-200"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur" class="bg-gray-50 py-24 sm:py-32">
+            <div class="container mx-auto max-w-7xl px-4 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center lg:max-w-3xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
+                        Semua yang Anda butuhkan. Tidak ada yang tidak.
+                    </h2>
+                    <p class="mt-4 text-lg text-secondary">
+                        Kami fokus pada fitur inti yang benar-benar mendorong produktivitas, bukan menambah kerumitan.
+                    </p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-primary">
+                            <i data-lucide="check-square" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-dark">Manajemen Tugas Intuitif</h3>
+                        <p class="mt-2 text-base text-secondary">
+                            Buat, atur, dan selesaikan tugas dengan antarmuka seret-dan-lepas yang bersih dan cepat.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-primary">
+                            <i data-lucide="users" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-dark">Kolaborasi Tim</h3>
+                        <p class="mt-2 text-base text-secondary">
+                            Berikan komentar, lampirkan file, dan lihat kemajuan tim Anda di satu tempat yang terfokus.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-primary">
+                            <i data-lucide="calendar" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-dark">Pelacakan Progres</h3>
+                        <p class="mt-2 text-base text-secondary">
+                            Visualisasikan deadline dan pencapaian proyek dengan tampilan kalender dan timeline yang simpel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni" class="bg-white py-24 sm:py-32">
+            <div class="container mx-auto max-w-7xl px-4 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">Apa kata para profesional?</h2>
+                    <blockquote class="mt-12 text-2xl font-medium leading-relaxed text-dark sm:text-3xl">
+                        "FokusFlow mengubah cara tim saya bekerja. Akhirnya, sebuah alat yang tidak menghalangi jalan kami. Minimalis, cepat, dan tepat guna."
+                    </blockquote>
+                    <footer class="mt-10">
+                        <img class="mx-auto h-16 w-16 rounded-full object-cover" src="https://placehold.co/64x64/E0E7FF/3B82F6?text=SK" alt="Foto Sarah K.">
+                        <div class="mt-4">
+                            <div class="text-lg font-semibold text-dark">Sarah K., Desainer Grafis</div>
+                            <div class="text-base text-secondary">Studio Kreatif Mandiri</div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <section id="harga" class="bg-gray-50 py-24 sm:py-32">
+            <div class="container mx-auto max-w-7xl px-4 lg:px-8">
+                <div class="max-w-2xl mx-auto text-center lg:max-w-3xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
+                        Pilih paket yang sesuai untuk Anda
+                    </h2>
+                    <p class="mt-4 text-lg text-secondary">
+                        Harga transparan dan sederhana. Mulai gratis, tingkatkan saat Anda berkembang.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:max-w-4xl mx-auto">
+                    <div class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8">
+                        <h3 class="text-2xl font-semibold text-dark">Gratis</h3>
+                        <p class="mt-2 text-secondary">Untuk individu dan pemula.</p>
+                        <p class="mt-6 text-5xl font-bold text-dark">$0</p>
+                        <ul role="list" class="mt-8 space-y-3 text-secondary">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>3 Proyek</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Tugas Tidak Terbatas</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Kolaborator (2 orang)</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-10 block rounded-lg border border-primary px-6 py-3 text-center text-base font-semibold text-primary transition-colors hover:bg-blue-50">
+                            Mulai Gratis
+                        </a>
+                    </div>
+                    
+                    <div class="relative flex flex-col rounded-2xl border-2 border-primary bg-white p-8 shadow-2xl shadow-blue-200/50">
+                        <span class="absolute -top-3 left-8 rounded-full bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white">
+                            Paling Populer
+                        </span>
+                        <h3 class="text-2xl font-semibold text-dark">Pro</h3>
+                        <p class="mt-2 text-secondary">Untuk tim kecil dan freelancer pro.</p>
+                        <p class="mt-6 text-5xl font-bold text-dark">$9<span class="text-lg font-medium text-secondary">/bulan</span></p>
+                        <ul role="list" class="mt-8 space-y-3 text-secondary">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Proyek Tidak Terbatas</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Kolaborator (10 orang)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Laporan Lanjutan</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-primary"></i>
+                                <span>Dukungan Prioritas</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-10 block rounded-lg bg-primary px-6 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover">
+                            Coba Pro Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-24 sm:py-32">
+            <div class="container mx-auto max-w-3xl px-4 text-center lg:px-8">
+                <h2 class="text-4xl font-bold tracking-tight text-dark sm:text-5xl">
+                    Siap untuk bekerja lebih tenang?
+                </h2>
+                <p class="mt-6 text-lg leading-8 text-secondary">
+                    Mulai gunakan FokusFlow hari ini secara gratis. Tidak ada risiko, hanya produktivitas murni.
+                </p>
+                <div class="mt-10">
+                    <a href="#" class="rounded-lg bg-primary px-10 py-4 text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover">
+                        Daftar Sekarang - Gratis
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white">
+        <div class="container mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div class="grid grid-cols-2 gap-12 md:grid-cols-4">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide text-dark">Produk</h3>
+                    <ul role="list" class="mt-4 space-y-3">
+                        <li><a href="#fitur" class="text-base text-secondary hover:text-dark">Fitur</a></li>
+                        <li><a href="#harga" class="text-base text-secondary hover:text-dark">Harga</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Integrasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide text-dark">Perusahaan</h3>
+                    <ul role="list" class="mt-4 space-y-3">
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Tentang Kami</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Karir</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide text-dark">Bantuan</h3>
+                    <ul role="list" class="mt-4 space-y-3">
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Pusat Bantuan</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Hubungi Kami</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wide text-dark">Legal</h3>
+                    <ul role="list" class="mt-4 space-y-3">
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-base text-secondary hover:text-dark">Syarat Layanan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 border-t border-gray-200 pt-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
+                <p class="text-sm text-secondary">&copy; 2025 FokusFlow. Semua hak cipta dilindungi.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-secondary hover:text-dark">
+                        <i data-lucide="twitter" class="h-5 w-5"></i>
+                        <span class="sr-only">X/Twitter</span>
+                    </a>
+                    <a href="#" class="text-secondary hover:text-dark">
+                        <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a href="#" class="text-secondary hover:text-dark">
+                        <i data-lucide="github" class="h-5 w-5"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
